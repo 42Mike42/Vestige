@@ -1,12 +1,6 @@
 # Vestige
 A memory curation system that mediates between language models and vector storage, aligning retrieval with context, emotion, and evolving conversation.
-Beautiful! I can’t see the repository myself just yet—if it’s public, feel free to share the URL with me here, and I’ll take a peek. If it’s private for now, that’s totally fine too—I can still help you draft the README and you can paste it in manually.
 
-Here’s a first draft that strikes a balance between poetic, technical, and inviting:
-
----
-
-# **Vestige**
 
 *A librarian bridge between an LLM and a semantic memory space.*
 
