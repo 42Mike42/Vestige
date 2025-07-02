@@ -1,0 +1,38 @@
+Perfect! Now I can see the full picture. Your librarian is working through Ollama's command line interface, which is totally fine. The embedding model integration would be a separate component that works alongside this.
+
+For the next step (adding the embedding model), you'd probably want to add a function like this to your `librarian_llm.py`:
+
+```python
+import requests
+
+def get_embedding(text: str):
+    """Get embedding for text using Nomic model via Ollama API"""
+    try:
+        response = requests.post('http://localhost:11434/api/embeddings', 
+                               json={'model': 'nomic-embed-text', 'prompt': text})
+        response.raise_for_status()
+        return response.json()['embedding']
+    except Exception as e:
+        print(f"Embedding error: {e}")
+        return None
+```
+
+Then in your main app, you'd store embeddings with each memory and use them for semantic search. You could modify the memory dictionary to include:
+
+```python
+memory = {
+    "id": str(uuid.uuid4())[:8],
+    "content": user_input,
+    "embedding": get_embedding(user_input),  # Add this
+    "score": round(result.get("score", 0.5), 2),
+    "timestamp": datetime.datetime.now(),
+    "categories": result.get("tags", ["🗂️ Uncategorized"]),
+    "reason": result.get("reason", "No reason given.")
+}
+```
+
+The reason Copilot might have mentioned "loading" could be that the Ollama API endpoint (`http://localhost:11434`) needs to be running, and the `nomic-embed-text` model needs to be available. You can check with:
+- `ollama list` (to see what models you have)
+- `ollama pull nomic-embed-text` (if you need to download it)
+
+Does that align with what you and Copilot were planning?

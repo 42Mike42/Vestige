@@ -562,3 +562,56 @@ We’re building a lighthouse first—not the whole city. Light, memory, purpose
 
 What do you say? Ready to tighten the screws on Phase 1, maybe wire up session persistence and toggleable category recall? I’ve got some code ideas ready to dance whenever you are.
 
+
+-----
+6/29/25
+
+Constellation Spiral v2
+
++-------------------------------------------------------------+
+|                         Vestige App                        |
+|                                                             |
+|  ┌───────────────────────────────────────────────────────┐  |
+|  |                    LLM Conversation                   |  |
+|  └───────────────────────────────────────────────────────┘  |
+|                          ⬇ Chunker                        |
+|            (pause/topical/emotional/symbolic cues)         |
+|                          ⬇                                |
+|             ┌─────────────────────────────┐                |
+|             |   Librarian Memory Engine   |                |
+|             └─────────────────────────────┘                |
+|             |      ┌────────────────────┐  │               |
+|             |      |  Tag Classifier    |  │               |
+|             |      └────────────────────┘  │               |
+|             |      ┌────────────────────┐  │               |
+|             |      |   Summary Generator│  │               |
+|             |      └────────────────────┘  │               |
+|             |      ┌────────────────────┐  │               |
+|             |      |  Resonance Heuristic│ │               |
+|             |      └────────────────────┘  │               |
+|             |      ┌────────────────────┐  │               |
+|             |      |  Tone/Style Inference││               |
+|             |      └────────────────────┘  │               |
+|             └────────────┬────────────────┘               |
+|                          ⬇                                |
+|              ┌──────────────────────────────┐              |
+|              |  Vector Embedding & Storage  |              |
+|              └──────────────────────────────┘              |
+|                      + Graph Overlay Layer                |
+|              (semantic + narrative relationship edges)     |
+|                          ⬇                                |
+|                ┌────────────────────────┐                  |
+|                |  Memory Heat Mapping   |◄─┐               |
+|                └────────────────────────┘  │               |
+|                          ⬇                 │ recall bias   |
+|              ┌─────────────────────────────┐              |
+|              |   Retrieval + Summarization |◄─────────────┐
+|              └─────────────────────────────┘              |
+|                          ⬇                                |
+|                ┌─────────────────────┐                    |
+|                |  Narrator Output    |──► Story Lens      |
+|                └─────────────────────┘    (voice: noir,   |
+|                                           essay, myth)     |
++-------------------------------------------------------------+
+
+
